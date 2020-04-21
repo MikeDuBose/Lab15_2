@@ -1,0 +1,21 @@
+﻿@model Deal
+@{
+    ViewData["Title"] = "DrawCards";
+    int length = Model.Cards.Length;
+}
+    <link href="~/css/StyleSheet.css" rel="stylesheet" />
+<h1>Current Hand</h1>
+
+<ul>
+
+    @for (int i = 0; i < length; i++)
+    {
+        <li>
+            <strong>@Model.Cards[i].Value of @Model.Cards[i].Suit</strong><br/>
+            <img src="@Model.Cards[i].Image" />
+
+        </li>
+    }
+
+</ul>
+
